@@ -1,0 +1,41 @@
+--------------------
+
+r rb_ary_subseq()... -------------------- no
+
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_ary_subseq();
+14: int t(void) { rb_ary_subseq(); return 0; }
+/* end */
+
+end */
+
+achine/include/capi -I.  -g -O2  -fPIC conftest.c  -L. -L/home/ubuntu/rubinius/build/rubinius/lib -Wl,-R/home/ubuntu/rubinius/bui"clang-5.0 -o conftest -I/home/ubuntu/rubinius/build/rubinius/machine/include/capi -I/home/ubuntu/rubinius/build/rubinius/machine/include/capi/ruby/backward -I/home/ubuntu/rubinius/build/rubinius/machine/include/capi -I.  -g -O2  -fPIC conftest.c  -L. -L/home/ubuntu/rubinius/build/rubinius/lib -Wl,-R/home/ubuntu/rubinius/build/rubinius/lib  -Wl,--export-dynamic -lrt -lcrypt -ldl -lpthread -latomic         "
+conftest.c:13:13: error: conflicting types for 'rb_ary_subseq'
+extern void rb_ary_subseq();
+            ^
+/home/ubuntu/rubinius/build/rubinius/machine/include/capi/ruby/ruby.h:1057:11: note: previous declaration is here
+  VALUE   rb_ary_subseq(VALUE, long, long);
+          ^
+conftest.c:14:29: error: too few arguments to function call, expected 3, have 0
+int t(void) { rb_ary_subseq(); return 0; }
+              ~~~~~~~~~~~~~ ^
+/home/ubuntu/rubinius/build/rubinius/machine/include/capi/ruby/ruby.h:1057:3: note: 'rb_ary_subseq' declared here
+  VALUE   rb_ary_subseq(VALUE, long, long);
+  ^
+/home/ubuntu/rubinius/build/rubinius/machine/include/capi/capi_oop.h:17:15: note: expanded from macro 'VALUE'
+#define VALUE intptr_t
+              ^
+2 errors generated.

@@ -1,0 +1,16 @@
+current directory: /home/ubuntu/rubinius/build/rubinius/gems/gems/racc-1.4.14/ext/racc
+/home/ubuntu/rubinius/build/rubinius/bin/rbx -r ./siteconf20180408-20050-19epmol.rb extconf.rb
+checking for rb_ary_subseq()... no
+creating Makefile
+
+current directory: /home/ubuntu/rubinius/build/rubinius/gems/gems/racc-1.4.14/ext/racc
+make "DESTDIR=" clean
+
+current directory: /home/ubuntu/rubinius/build/rubinius/gems/gems/racc-1.4.14/ext/racc
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/ubuntu/rubinius/build/rubinius/gems/gems/racc-1.4.14/ext/racc
+make "DESTDIR=" install
+install -c -m 0755 cparse.so ./.gem.20180408-20050-1g8cxcm/racc

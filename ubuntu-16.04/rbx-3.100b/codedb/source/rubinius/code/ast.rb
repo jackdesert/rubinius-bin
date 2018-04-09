@@ -1,0 +1,18 @@
+# -*- encoding: us-ascii -*-
+
+require "rubinius/code/ast/node"
+require "rubinius/code/ast/self"
+require "rubinius/code/ast/constants"
+require "rubinius/code/ast/control_flow"
+require "rubinius/code/ast/data"
+require "rubinius/code/ast/definitions"
+require "rubinius/code/ast/encoding"
+require "rubinius/code/ast/exceptions"
+require "rubinius/code/ast/file"
+require "rubinius/code/ast/grapher"
+require "rubinius/code/ast/literals"
+require "rubinius/code/ast/operators"
+require "rubinius/code/ast/sends"
+require "rubinius/code/ast/values"
+require "rubinius/code/ast/variables"
+require "rubinius/code/ast/transforms"
